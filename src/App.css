@@ -1,8 +1,4 @@
-.App {
-  /* text-align: center; */
-}
-
-.header {
+/* .header {
   opacity: 1;
   transform: translateY(0);
   transition: transform .3s cubic-bezier(.4, 0, .2, 1) .3s, opacity 0s .3s;
@@ -16,7 +12,7 @@
 
 .sidebar {
   border: 1px dotted grey;
-  width: 35%;
+  width: 280px;
   position: fixed;
   margin: 2px;
   z-index: 1;
@@ -59,4 +55,4 @@ button {
 
 .box {
   padding: 15px;
-}
+} */

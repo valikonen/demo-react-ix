@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-// import Header from './components/Header';
+import Header from './components/Header';
 
 function App() {
 
 
   return (
     <div className="App">
-      <header className="header">
+      {/* <header className="header">
         <button>
           <i class="material-icons notranslate header__hamburger-icon" title="Toggle Navigation">DropDown Menu</i>
         </button>
@@ -53,11 +53,11 @@ function App() {
             <p>ASDE aeR AER Aer AE F DASF AER ASDE aeR AER Aer AE F DASF AER ASDE aeR AER Aer AE F DASF AER </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 
-      {/* <Header /> */}
+      <Header />
 
     </div>
   );
