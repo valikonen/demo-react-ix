@@ -1,6 +1,13 @@
 import React from 'react';
 
 import img1 from '../assets/img/products/img-01.jpg';
+import img2 from '../assets/img/products/img-02.jpg';
+import img3 from '../assets/img/products/img-03.jpg';
+import img4 from '../assets/img/products/img-04.jpg';
+import img5 from '../assets/img/products/img-05.jpg';
+import img6 from '../assets/img/products/img-06.jpg';
+import img7 from '../assets/img/products/img-07.jpg';
+import img8 from '../assets/img/products/img-08.jpg';
 
 const Products = () => {
     return (
@@ -46,7 +53,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-02.jpg" alt="" /></a>
+                    <a href="/#"><img src={img2} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker discount"><strong>-40%</strong></span>
@@ -80,7 +87,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-03.jpg" alt="" /></a>
+                    <a href="/#"><img src={img3} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <div className="actions">
@@ -113,7 +120,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-04.jpg" alt="" /></a>
+                    <a href="/#"><img src={img4} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker sale"><strong>Sale</strong></span>
@@ -147,7 +154,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="/src/assets/img/products/img-05.jpg" alt="" /></a>
+                    <a href="/#"><img src={img5} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker sale"><strong>Sale</strong></span>
@@ -181,7 +188,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-06.jpg" alt="" /></a>
+                    <a href="/#"><img src={img6} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <div className="actions">
@@ -214,7 +221,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-07.jpg" alt="" /></a>
+                    <a href="/#"><img src={img7} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker new"><strong>NEW</strong></span>
@@ -248,7 +255,7 @@ const Products = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src="assets/img/products/img-08.jpg" alt="" /></a>
+                    <a href="/#"><img src={img8} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <div className="actions">
