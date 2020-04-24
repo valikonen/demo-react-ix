@@ -1,29 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-
-import 'font-awesome/css/font-awesome.min.css';
+import React from 'react';
+import { Link } from "react-router-dom";
 
 
 
-const Header = (props) => {
-  const [sideBar, setSidebar] = useState(false);
 
-  useEffect(() => {
-  }, [sideBar]);
-
-  const toggleSideBar = () => {
-    setSidebar(oldValue => !oldValue)
-  }
-
+const Header = () => {
   return (
-    <>
-      <button onClick={toggleSideBar}>Side</button>
-      {/* Header Section Start */}
       <div className="header">
 
         {/* Start Top Bar */}
@@ -103,13 +85,15 @@ const Header = (props) => {
                 {/* Start Navigation List */}
                 <ul className="nav navbar-nav navbar-right">
                   <li>
-                    <a className="active" href="index.html">Home <span className="caret"></span></a>
+                  <Link className="active" to="/">
+                    <span className="caret"></span>
+                    Home
+                  </Link>
                   </li>
-                  <li>
-                    <a href="about.html">
-                      About
-                    </a>
-                  </li>
+                  <Link to="/users">
+                    <span className="caret"></span>
+                    Users
+                  </Link>
                 </ul>
                 {/* End Navigation List */}
               </div>
@@ -243,8 +227,6 @@ const Header = (props) => {
           {/* Mobile Menu End */}
         </nav>
       </div>
-      {/* Header Section End */}
-    </>
   )
 }
 

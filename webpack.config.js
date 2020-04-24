@@ -26,5 +26,10 @@ module.exports = {
     // plugins: [
     //   new HtmlWebpackPlugin({template: './src/index.html'})
     // ]
+  },
+  resolve: {
+    alias: {        
+        'react-router-dom': path.resolve('./node_modules/react-router-dom')
+    }
   }
 };
