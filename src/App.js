@@ -1,6 +1,9 @@
 import React from 'react';
-import './App.css';
+import { Sidebar } from './components/Sidebar';
+import Products from './components/Products';
 import Header from './components/Header';
+import Footer from './components/Footer';
+
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
 import './assets/css/responsive.css';
@@ -11,6 +14,9 @@ function App() {
   return (
     <>
       <Header />
+      <Sidebar />
+      <Products />
+      <Footer />
     </>
   );
 }
