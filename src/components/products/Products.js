@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getProducts } from '../../redux/products/productsActions'
 import ProductItem from './ProductItem';
+import AddProduct from './AddProduct';
 
 const Products = ({products, getProducts}) => {
-    // const [products, setProducts] = useState(props.products);
 
     useEffect(() => {
         getProducts();

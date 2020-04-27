@@ -14,8 +14,11 @@ import { Sidebar } from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const Products = lazy(() => import('./components/products/Products'));
-const Users = lazy(() => import('./components/Users'));
+// const Products = lazy(() => import('./components/products/Products'));
+import Products from './components/products/Products';
+// const Users = lazy(() => import('./components/Users'));
+import Users from './components/Users';
+import AddProduct from './components/products/AddProduct';
 
 function App() {
   return (
@@ -26,12 +29,15 @@ function App() {
           <Sidebar />
           
             <Switch>
-              <Suspense fallback={<div>Loading Products...</div>}>
+              {/* <Suspense fallback={<div>Loading Products...</div>}> */}
                 <Route exact path="/" component={Products} />
-              </Suspense>
-              <Suspense fallback={<div>Loading Users...</div>}>
-                <Route path="/users" component={Users} />
-              </Suspense>
+              {/* </Suspense> */}
+              {/* <Suspense fallback={<div>Loading Users...</div>}> */}
+                <Route path="users" component={Users} />
+              {/* </Suspense> */}
+              {/* <Suspense fallback={<div>Add product...</div>}> */}
+                <Route path="/add-product" component={AddProduct} />
+              {/* </Suspense> */}
             </Switch>
          
         </Provider>

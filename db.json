@@ -1,12 +1,82 @@
 {
-    "products": [
-      { "id": 1, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-01.jpg" },
-      { "id": 2, "title": "Product 2", "price": 49.99, "imgUrl": "../../assets/img/products/img-02.jpg" },
-      { "id": 3, "title": "Product 3", "price": 49.99, "imgUrl": "../../assets/img/products/img-03.jpg" },
-      { "id": 4, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-04.jpg" },
-      { "id": 5, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-05.jpg" },
-      { "id": 6, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-06.jpg" },
-      { "id": 7, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-07.jpg" },
-      { "id": 8, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-08.jpg" }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-01.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 49.99,
+      "imgUrl": "img-03.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 49.99,
+      "imgUrl": "img-03.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-04.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-05.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-06.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-07.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-08.jpg"
+    },
+    {
+      "title": "Product 9",
+      "price": "2323",
+      "imgUrl": "img-04.jpg",
+      "id": 9
+    },
+    {
+      "title": "sdsdsdsd",
+      "price": "2323",
+      "imgUrl": "img-08.jpg",
+      "id": 10
+    },
+    {
+      "title": "cfrffrffr",
+      "price": "9898",
+      "imgUrl": "img-02.jpg",
+      "id": 11
+    },
+    {
+      "title": "xxxx",
+      "price": "121212",
+      "imgUrl": "img-03.jpg",
+      "id": 12
+    },
+    {
+      "title": "qqq",
+      "price": "2",
+      "imgUrl": "img-08.jpg",
+      "id": 13
+    }
+  ]
+}
