@@ -12,20 +12,17 @@ const Products = ({products, getProducts}) => {
 
     return (
         <section id="shop-collection">
-            
             <div className="container">
                 <h1 className="section-title">New Arrivals</h1>
                 <hr className="lines" />
                 <div className="row">
-                    
                     {   
                         products.productsItems && products.productsItems.map(product => (
                             <ProductItem key={product.id} productProp={product} />
                         ))
                     }
-                    
+                </div>
             </div>
-        </div>
         </section>
     );
 }
