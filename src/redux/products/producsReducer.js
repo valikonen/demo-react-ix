@@ -1,17 +1,13 @@
 import { GET_PRODUCTS_SUCCESS, GET_PRODUCTS_ERROR } from './productsType';
 
-const initialState = [{
-    title: '',
-    price: '',
-    imgUrl: ''
-}]
+const initialState = []
 
 const productsReducer = (state = initialState, action) => {
     switch(action.type) {
         case GET_PRODUCTS_SUCCESS: 
             return {
                 ...state,
-                products: action.payload
+                productsItems: action.payload
             }
         case GET_PRODUCTS_ERROR: 
             return {

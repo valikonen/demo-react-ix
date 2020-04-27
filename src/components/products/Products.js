@@ -3,24 +3,27 @@ import { connect } from 'react-redux';
 import { getProducts } from '../../redux/products/productsActions'
 import ProductItem from './ProductItem';
 
-const Products = (props) => {
-    const [products, setProducts] = useState(props.products);
+const Products = ({products, getProducts}) => {
+    // const [products, setProducts] = useState(props.products);
 
     useEffect(() => {
-        setProducts(props.getProducts());
+        getProducts();
     }, []);
 
     return (
-      <section id="shop-collection">
-        <div className="container">
-            <h1 className="section-title">New Arrivals</h1>
-            <hr className="lines" />
-            <div className="row">
-                
-                {   
-                    products.length > 0 && products.map(product => <ProductItem key={product.id} productItem={product} />)
-                }
-                
+        <section id="shop-collection">
+            
+            <div className="container">
+                <h1 className="section-title">New Arrivals</h1>
+                <hr className="lines" />
+                <div className="row">
+                    
+                    {   
+                        products.productsItems && products.productsItems.map(product => (
+                            <ProductItem key={product.id} productProp={product} />
+                        ))
+                    }
+                    
             </div>
         </div>
         </section>

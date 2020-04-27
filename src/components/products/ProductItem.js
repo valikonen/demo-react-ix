@@ -1,13 +1,11 @@
 import React from 'react';
 
-const ProductItem = ({productItem}) => {
+const ProductItem = ({productProp}) => {
     return (
-        <>
-            <h1>CFR</h1>
-            {/* <div className="col-md-3 col-sm-6 col-xs-12">
-                <div className="shop-product">
+        <div className="col-md-3 col-sm-6 col-xs-12">
+            <div className="shop-product">
                 <div className="product-box">
-                    <a href="/#"><img src={productItem.imgUrl} alt="" /></a>
+                    <a href="/#"><img src={productProp.imgUrl} alt="" /></a>
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker new"><strong>NEW</strong></span>
@@ -36,9 +34,8 @@ const ProductItem = ({productItem}) => {
                     </div>
                     </div>
                 </div>
-                </div>
-            </div> */}
-        </>
+            </div>
+        </div>
     );
 }
 

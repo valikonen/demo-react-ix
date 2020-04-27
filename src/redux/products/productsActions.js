@@ -20,7 +20,8 @@ export const getProducts = () => {
     return (dispatch) => {
         axios.get('http://localhost:3004/products')
              .then(response => {
-                 dispatch(getProductsSuccess(response))
+                 console.log('response: ', response.data);
+                 dispatch(getProductsSuccess(response.data))
              })
              .catch(err => {
                  dispatch(getProductsError(err.message))
