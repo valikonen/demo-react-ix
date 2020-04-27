@@ -1,0 +1,12 @@
+{
+    "products": [
+      { "id": 1, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-01.jpg" },
+      { "id": 2, "title": "Product 2", "price": 49.99, "imgUrl": "../../assets/img/products/img-02.jpg" },
+      { "id": 3, "title": "Product 3", "price": 49.99, "imgUrl": "../../assets/img/products/img-03.jpg" },
+      { "id": 4, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-04.jpg" },
+      { "id": 5, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-05.jpg" },
+      { "id": 6, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-06.jpg" },
+      { "id": 7, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-07.jpg" },
+      { "id": 8, "title": "Product 1", "price": 49.99, "imgUrl": "../../assets/img/products/img-08.jpg" }
+    ]
+  }
