@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-
+import { useToasts } from 'react-toast-notifications'
 import { createProduct } from '../../redux/products/productsActions';
 
 const AddProduct = () => {
-
+  const { addToast } = useToasts();
+  const dispatch = useDispatch();
+  
   const [product, setProduct] = useState(() => {
     return {title: '', price: null, imgUrl: 'img-08.jpg' }
   });
-
-  const dispatch = useDispatch();
 
 
   const onAddProduct = (e) => {
     e.preventDefault();
     dispatch(createProduct(product));
+    addToast('Saved Successfully', { appearance: 'success' });
   }
 
   return (

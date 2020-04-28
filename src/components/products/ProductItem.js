@@ -5,7 +5,7 @@ const ProductItem = ({productProp}) => {
         <div className="col-md-3 col-sm-6 col-xs-12">
             <div className="shop-product">
                 <div className="product-box">
-                    <img src={require(`../../assets/img/products/${productProp.imgUrl}` )} />
+                    <img alt="" src={require(`../../assets/img/products/${productProp.imgUrl}` )} />
                     <div className="cart-overlay">
                     </div>
                     <span className="sticker new"><strong>NEW</strong></span>
@@ -13,7 +13,7 @@ const ProductItem = ({productProp}) => {
                         <div className="add-to-links">
                             <a href="/#" className="btn-cart"><i className="icon-basket"></i></a>
                             <a href="/#" className="btn-wish"><i className="icon-heart"></i></a>
-                            <a className="btn-quickview md-trigger" data-modal="modal-3"><i className="icon-eye"></i></a>
+                            {/* <a href="" className="btn-quickview md-trigger" data-modal="modal-3"><i className="icon-eye"></i></a> */}
                         </div>
                     </div>
                 </div>

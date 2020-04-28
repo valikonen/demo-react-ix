@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ToastProvider } from 'react-toast-notifications';
 
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
@@ -29,6 +30,7 @@ function App() {
           <Sidebar />
           
             <Switch>
+              <ToastProvider>
               {/* <Suspense fallback={<div>Loading Products...</div>}> */}
                 <Route exact path="/" component={Products} />
               {/* </Suspense> */}
@@ -38,6 +40,7 @@ function App() {
               {/* <Suspense fallback={<div>Add product...</div>}> */}
                 <Route path="/add-product" component={AddProduct} />
               {/* </Suspense> */}
+              </ToastProvider>
             </Switch>
          
         </Provider>
