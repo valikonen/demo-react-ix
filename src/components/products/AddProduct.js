@@ -14,8 +14,13 @@ const AddProduct = () => {
 
   const onAddProduct = (e) => {
     e.preventDefault();
-    dispatch(createProduct(product));
-    addToast('Saved Successfully', { appearance: 'success' });
+    if (product.imgUrl !== '' && product.price !== null && product.title !== '') {
+      dispatch(createProduct(product));
+      addToast('Saved Successfully', { appearance: 'success' });
+    } else {
+      addToast('Required Fields are Missing', { appearance: 'error' });
+    }
+    
   }
 
   return (
