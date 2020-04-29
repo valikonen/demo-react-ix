@@ -8,6 +8,7 @@ const ProductItem = ({ productProp }) => {
           <img alt="" src={require(`../../assets/img/products/${productProp.imgUrl}`)} />
           <div className="cart-overlay">
           </div>
+          <span className="category"><strong>{productProp.category}'s Colection</strong></span>
           <span className="sticker new"><strong>NEW</strong></span>
           <div className="actions">
             <div className="add-to-links">

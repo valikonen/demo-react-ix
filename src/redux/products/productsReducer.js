@@ -19,7 +19,9 @@ const productsReducer = (state = initialState, action) => {
         ...state,
         title: action.payload.title,
         price: action.payload.price,
-        imgUrl: action.payload.imgUrl
+        imgUrl: action.payload.imgUrl,
+        category: action.payload.category,
+        items_in_stock: action.payload.items_in_stock
       }
     default: return state
   }

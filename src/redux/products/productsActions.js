@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import { GET_PRODUCTS_SUCCESS, GET_PRODUCTS_ERROR, CREATE_PRODUCT_SUCCESS } from './productsType';
 
@@ -40,7 +39,9 @@ export const createProduct = (product) => {
     axios.post('http://localhost:3004/products', {
       title: product.title,
       price: product.price,
-      imgUrl: product.imgUrl
+      imgUrl: product.imgUrl,
+      category: product.category,
+      items_in_stock: product.items_in_stock
     });
   }
 }

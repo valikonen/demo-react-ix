@@ -2470,6 +2470,10 @@ checkbox .checkbox-material {
 .shop-product .new {
   background: #FFC107;
 }
+.shop-product .category {
+  background: rgb(238, 155, 155);
+  color: white;
+}
 .shop-product .discount {
   background: #3f51b5;
 }
