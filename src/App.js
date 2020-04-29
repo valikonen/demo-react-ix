@@ -17,8 +17,8 @@ import Footer from './components/Footer';
 
 // const Products = lazy(() => import('./components/products/Products'));
 import Products from './components/products/Products';
-// const Users = lazy(() => import('./components/Users'));
-import Users from './components/Users';
+// const User = lazy(() => import('./components/User'));
+import User from './components/User';
 import AddProduct from './components/products/AddProduct';
 
 function App() {
@@ -28,21 +28,21 @@ function App() {
         <Provider store={store}>
           <Header />
           <Sidebar />
-          
-            <Switch>
-              <ToastProvider>
+
+          <Switch>
+            <ToastProvider>
               {/* <Suspense fallback={<div>Loading Products...</div>}> */}
-                <Route exact path="/" component={Products} />
+              <Route exact path="/" component={Products} />
               {/* </Suspense> */}
-              {/* <Suspense fallback={<div>Loading Users...</div>}> */}
-                <Route path="users" component={Users} />
+              {/* <Suspense fallback={<div>Loading User...</div>}> */}
+              <Route path="user" component={User} />
               {/* </Suspense> */}
               {/* <Suspense fallback={<div>Add product...</div>}> */}
-                <Route path="/add-product" component={AddProduct} />
+              <Route path="/add-product" component={AddProduct} />
               {/* </Suspense> */}
-              </ToastProvider>
-            </Switch>
-         
+            </ToastProvider>
+          </Switch>
+
         </Provider>
       </Router>
       <Footer />
