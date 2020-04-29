@@ -1,5 +1,6 @@
 import { GET_USER_SUCCESS, GET_USER_ERROR } from './userActionType';
-const initialState = [];
+
+const initialState = {};
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {

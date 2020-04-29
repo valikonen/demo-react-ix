@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { getUser } from '../redux/user/userActions';
 
 
-const User = ({ user, getUser }) => {
-
+const User = (props, { user, getUser }) => {
+  console.log(props);
   useEffect(() => {
     getUser();
-  }, {})
+  }, [])
 
   return (
     <div>
