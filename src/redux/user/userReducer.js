@@ -1,4 +1,4 @@
-import { GET_USER_SUCCESS, GET_USER_ERROR } from './userActionType';
+import { GET_USER_SUCCESS, GET_USER_ERROR, EDIT_USER_SUCCESS } from './userActionType';
 
 const initialState = {};
 
@@ -15,6 +15,11 @@ const userReducer = (state = initialState, action) => {
         error: action.payload
       }
     }
+    case EDIT_USER_SUCCESS:
+      return {
+        ...state,
+        user: action.payload
+      }
 
     default: return state
   }

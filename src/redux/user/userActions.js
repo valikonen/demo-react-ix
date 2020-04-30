@@ -25,3 +25,14 @@ export const getUser = () => {
       })
   }
 }
+
+export const editUser = (user) => {
+  return () => {
+    axios.post('http://localhost:3004/user', {
+      id: user.id,
+      name: user.name,
+      is_admin: user.is_admin,
+      is_authenticated: user.is_authenticated
+    });
+  }
+}

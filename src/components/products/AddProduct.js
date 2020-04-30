@@ -44,7 +44,6 @@ const AddProduct = () => {
       <div className="row">
         <div className="col-xs-12">
           <form onSubmit={onAddProduct}>
-            {JSON.stringify(product)}
             <div className="form-group">
               <label htmlFor="title">Title</label>
               <input

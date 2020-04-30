@@ -115,8 +115,8 @@
   ],
   "user": {
     "id": "324352454254652",
-    "name": "Ascultewwa Listpr",
-    "is_authenticated": true,
-    "is_admin": false
+    "name": "Another Taks ",
+    "is_admin": true,
+    "is_authenticated": true
   }
 }
