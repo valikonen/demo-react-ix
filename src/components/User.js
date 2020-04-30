@@ -61,7 +61,6 @@ const User = ({ user, getUser }) => {
                 className="form-control"
                 id="name"
                 placeholder="Name"
-                value={editedUser.name}
                 onChange={e => setCurrentUser({ ...editedUser, name: e.target.value })} />
             </div>
 
@@ -69,7 +68,6 @@ const User = ({ user, getUser }) => {
               <label htmlFor="isAdmin">Is Admin ?</label>
               <select
                 name="isAdmin"
-                value={editedUser.is_admin}
                 onChange={e => setCurrentUser({ ...editedUser, is_admin: transformToBoolean(e.target.value) })}>
                 <option value=''></option>
                 <option id="0">true</option>

@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Cart from './Cart';
 
 const Header = () => {
+  const [navBarRightItemActive, setNavBarRightItemActive] = useState(() => {
+    return { products: true, user: false, addProduct: false }
+  });
+
+  const setButtonState = (buttonName) => {
+    switch (buttonName) {
+      case 'products':
+        setNavBarRightItemActive(() => { return { products: true, user: false, addProduct: false } })
+        break;
+      case 'user':
+        setNavBarRightItemActive(() => { return { products: false, user: true, addProduct: false } })
+        break;
+      case 'addProduct':
+        setNavBarRightItemActive(() => { return { products: false, user: false, addProduct: true } })
+        break;        
+      default:
+        setNavBarRightItemActive(() => { return { products: false, user: false, addProduct: false } })
+    }
+  }
+
   return (
     <div className="header">
 
@@ -34,17 +54,23 @@ const Header = () => {
               {/* Start Navigation List */}
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <Link className="active" to="/">
+                  <Link
+                    className={`${navBarRightItemActive.products ? 'active' : ''}`} to="/"
+                    onClick={() => setButtonState('products')}>
                     Products
                   </Link>
                 </li>
                 <li>
-                  <Link to="/user">
+                  <Link to="/user"
+                    className={`${navBarRightItemActive.user ? 'active' : ''}`}
+                    onClick={() => setButtonState('user')}>
                     User
                   </Link>
                 </li>
                 <li>
-                  <Link to="/add-product">
+                  <Link to="/add-product"
+                    className={`${navBarRightItemActive.addProduct ? 'active' : ''}`}
+                    onClick={() => setButtonState('addProduct')}>
                     Add product
                   </Link>
                 </li>
