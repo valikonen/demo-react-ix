@@ -40,62 +40,69 @@ const AddProduct = () => {
   }
 
   return (
-    <form onSubmit={onAddProduct}>
-      {JSON.stringify(product)}
-      <div className="form-group">
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          className="form-control"
-          id="title"
-          placeholder="Title"
-          value={product.title}
-          onChange={e => setProduct({ ...product, title: e.target.value })} />
-      </div>
-      <div className="form-group">
-        <label htmlFor="price">Price</label>
-        <input
-          type="number"
-          className="form-control"
-          id="price"
-          placeholder="Price"
-          value={product.price}
-          onChange={e => setProduct({ ...product, price: e.target.value })} />
-      </div>
-      <div className="form-group">
-        <label htmlFor="items_in_stock">No. of items in stock</label>
-        <input
-          type="number"
-          className="form-control"
-          id="items_in_stock"
-          placeholder="Stock"
-          value={product.items_in_stock}
-          onChange={e => setProduct({ ...product, items_in_stock: e.target.value })} />
-      </div>
-      <div className="form-group">
-        <label htmlFor="imgUrl">Img Url:</label>
-        <input
-          type="text"
-          className="form-control"
-          id="imgUrl"
-          value={product.imgUrl}
-          onChange={e => setProduct({ ...product, imgUrl: e.target.value })} />
-      </div>
-      <div className="form-group">
-        <label htmlFor="category">Category</label>
-        <select
-          name="category"
-          value={product.category}
-          onChange={e => setProduct({ ...product, category: e.target.value })}>
-          <option id="0">Man</option>
-          <option id="1">Woman</option>
-        </select>
-      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form onSubmit={onAddProduct}>
+            {JSON.stringify(product)}
+            <div className="form-group">
+              <label htmlFor="title">Title</label>
+              <input
+                type="text"
+                className="form-control"
+                id="title"
+                placeholder="Title"
+                value={product.title}
+                onChange={e => setProduct({ ...product, title: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="price">Price</label>
+              <input
+                type="number"
+                className="form-control"
+                id="price"
+                placeholder="Price"
+                value={product.price}
+                onChange={e => setProduct({ ...product, price: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="items_in_stock">No. of items in stock</label>
+              <input
+                type="number"
+                className="form-control"
+                id="items_in_stock"
+                placeholder="Stock"
+                value={product.items_in_stock}
+                onChange={e => setProduct({ ...product, items_in_stock: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="imgUrl">Img Url:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="imgUrl"
+                value={product.imgUrl}
+                onChange={e => setProduct({ ...product, imgUrl: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="category">Category</label>
+              <select
+                name="category"
+                value={product.category}
+                onChange={e => setProduct({ ...product, category: e.target.value })}>
+                <option id="0">Man</option>
+                <option id="1">Woman</option>
+              </select>
+            </div>
 
-      <button
-        type="submit"
-        className="btn btn-primary">Submit</button>
-    </form>
+            <button
+              type="submit"
+              className="btn btn-primary">Submit</button>
+          </form>
+          <br></br>
+        </div>
+      </div>
+    </div>
   )
 }
 
