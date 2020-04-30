@@ -11,13 +11,13 @@ const User = ({ user, getUser }) => {
 
   useEffect(() => {
     getUser();
-  }, [])
+  }, [getUser])
 
   const json = JSON.stringify(user);
   let currentUser = JSON.parse(json).user;
 
   const [editedUser, setCurrentUser] = useState(() => {
-    return Object.assign({}, currentUser)
+    return {name: '', is_admin: ''}
   });
 
   const onEditUser = (e) => {
@@ -35,7 +35,7 @@ const User = ({ user, getUser }) => {
   }
 
   const isFormValid = (user) => {
-    return user.name !== '';
+    return user.name && user.is_admin !== '';
   }
 
   const transformToBoolean = (string) => {

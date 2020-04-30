@@ -7,7 +7,7 @@ const Products = ({ products, getProducts }) => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [getProducts]);
 
   return (
     <section id="shop-collection">
