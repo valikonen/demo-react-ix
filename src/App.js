@@ -35,7 +35,7 @@ function App() {
               <Route exact path="/" component={Products} />
               {/* </Suspense> */}
               {/* <Suspense fallback={<div>Loading User...</div>}> */}
-              <Route path="user" component={User} />
+              <Route path="/user" component={User} />
               {/* </Suspense> */}
               {/* <Suspense fallback={<div>Add product...</div>}> */}
               <Route path="/add-product" component={AddProduct} />
