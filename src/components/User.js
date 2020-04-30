@@ -35,7 +35,7 @@ const User = ({ user, getUser }) => {
   }
 
   const isFormValid = (user) => {
-    return user.name && user.is_admin;
+    return user.name !== '';
   }
 
   const transformToBoolean = (string) => {
