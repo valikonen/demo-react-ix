@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
-const Cart = () => {
+const HeaderCart = () => {
   return (
     <>
       <div className="col-md-8 col-sm-10">
@@ -42,7 +43,10 @@ const Cart = () => {
                     <div className="price-s">$210.5</div>
                   </div>
                   <div className="cart-buttons">
-                    <a href="/#" className="btn btn-border-2">View Cart</a>
+                    <Link to="/cart"
+                      className="btn btn-border-2">
+                      View Cart
+                    </Link>
                     <a href="/#" className="btn btn-common">Checkout</a>
                     <div className="clear"></div>
                   </div>
@@ -56,4 +60,4 @@ const Cart = () => {
   );
 }
 
-export default Cart;
+export default HeaderCart;

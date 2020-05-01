@@ -12,7 +12,7 @@ const AddProduct = () => {
 
   const onAddProduct = (e) => {
     e.preventDefault();
-
+    
     if (isFormValid(product)) {
       dispatch(createProduct(product));
       addToast('Saved Successfully', { appearance: 'success', autoDismiss: true });
@@ -23,19 +23,19 @@ const AddProduct = () => {
   }
 
   const resetForm = (e) => {
-    setProduct({ title: '', price: null, imgUrl: 'img-08.jpg', items_in_stock: '', category: 'Man' })
+    setProduct({ title: '', price: null, imgUrl: 'img-08.jpg', items_in_stock: 0, category: 'Man' })
     e.target.elements.title.value = '';
     e.target.elements.price.value = null;
     e.target.elements.imgUrl.value = 'img-08.jpg';
-    e.target.elements.category.value = 'Man';
-    e.target.elements.items_in_stock = '';
+    e.target.elements.category.value = '';
+    e.target.elements.items_in_stock = null;
   }
 
   const isFormValid = (product) => {
     return (product.imgUrl &&
-      product.price &&
+      (product.price > 0) &&
       product.title &&
-      product.items_in_stock &&
+      (product.items_in_stock > 0) &&
       product.category)
   }
 
@@ -62,7 +62,7 @@ const AddProduct = () => {
                 id="price"
                 placeholder="Price"
                 value={product.price}
-                onChange={e => setProduct({ ...product, price: e.target.value })} />
+                onChange={e => setProduct({ ...product, price: parseFloat(e.target.value) })} />
             </div>
             <div className="form-group">
               <label htmlFor="items_in_stock">No. of items in stock</label>
@@ -72,7 +72,7 @@ const AddProduct = () => {
                 id="items_in_stock"
                 placeholder="Stock"
                 value={product.items_in_stock}
-                onChange={e => setProduct({ ...product, items_in_stock: e.target.value })} />
+                onChange={e => setProduct({ ...product, items_in_stock: parseFloat(e.target.value) })} />
             </div>
             <div className="form-group">
               <label htmlFor="imgUrl">Img Url:</label>
@@ -89,6 +89,7 @@ const AddProduct = () => {
                 name="category"
                 value={product.category}
                 onChange={e => setProduct({ ...product, category: e.target.value })}>
+                <option id="00"></option>
                 <option id="0">Man</option>
                 <option id="1">Woman</option>
               </select>
