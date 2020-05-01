@@ -1,14 +1,14 @@
 import React from 'react';
 
-const ProductItem = ({ productProp }) => {
+const ProductItem = ({ product }) => {
   return (
     <div className="col-md-3 col-sm-6 col-xs-12">
       <div className="shop-product">
         <div className="product-box">
-          <img alt="" src={require(`../../assets/img/products/${productProp.imgUrl}`)} />
+          <img alt="" src={require(`../../assets/img/products/${product.imgUrl}`)} />
           <div className="cart-overlay">
           </div>
-          <span className="category"><strong>{productProp.category}'s Colection</strong></span>
+          <span className="category"><strong>{product.category}'s Colection</strong></span>
           <span className="sticker new"><strong>NEW</strong></span>
           <div className="actions">
             <div className="add-to-links">
@@ -19,10 +19,10 @@ const ProductItem = ({ productProp }) => {
           </div>
         </div>
         <div className="product-info">
-          <h4 className="product-title"><a href="product-details.html">{productProp.title}</a></h4>
+          <h4 className="product-title"><a href="product-details.html">{product.title}</a></h4>
           <div className="align-items">
             <div className="pull-left">
-              <span className="price">${productProp.price}</span>
+              <span className="price">${product.price}</span>
             </div>
             <div className="pull-right">
               <div className="reviews-icon">

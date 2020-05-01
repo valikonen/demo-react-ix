@@ -17,7 +17,7 @@ const Products = ({ products, getProducts }) => {
         <div className="row">
           {
             products.productsItems && products.productsItems.map(product => (
-              <ProductItem key={product.id} productProp={product} />
+              <ProductItem key={product.id} product={product} />
             ))
           }
         </div>

@@ -4,7 +4,7 @@ import Cart from './Cart';
 
 const Header = () => {
   const [navBarRightItemActive, setNavBarRightItemActive] = useState(() => {
-    return { products: true, user: false, addProduct: false }
+    return { products: false, user: false, addProduct: false }
   });
 
   const setButtonState = (buttonName) => {
