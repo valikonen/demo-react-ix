@@ -5,19 +5,19 @@ import { ToastProvider } from 'react-toast-notifications';
 
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
-import './assets/css/responsive.css';
 import './assets/css/slicknav.css';
 import './assets/css/colors/blue.css';
+import './assets/less/main.less';
+import "./assets/fonts/font-awesome.min.css"
+import "./assets/fonts/line-icons/line-icons.css"
 
 import store from './redux/store';
-
 import { Sidebar } from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 // const Products = lazy(() => import('./components/products/Products'));
 import Products from './components/products/Products';
-// const User = lazy(() => import('./components/User'));
 import User from './components/User';
 import AddProduct from './components/products/AddProduct';
 

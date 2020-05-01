@@ -64,7 +64,7 @@ const Header = () => {
                   <Link to="/user"
                     className={`${navBarRightItemActive.user ? 'active' : ''}`}
                     onClick={() => setButtonState('user')}>
-                    User
+                    Edit User
                   </Link>
                 </li>
                 <li>
