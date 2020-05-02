@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import HeaderCart from './HeaderCart';
+import CartPopup from './CartPopup';
 
 const Header = () => {
   const [navBarRightItemActive, setNavBarRightItemActive] = useState(() => {
@@ -8,16 +8,11 @@ const Header = () => {
   });
 
   const setButtonState = (buttonName) => {
-    console.log('a',buttonName)
-
     switch (buttonName) {
       case '':
-      console.log('',buttonName)
-
         setNavBarRightItemActive(() => { return { products: false, user: false, addProduct: false } })
         break;
       case 'products':
-        console.log('pr',buttonName)
 
         setNavBarRightItemActive(() => { return { products: true, user: false, addProduct: false } })
         break;
@@ -40,7 +35,7 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-2"></div>
-            <HeaderCart />
+            <CartPopup />
           </div>
         </div>
       </div>
