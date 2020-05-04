@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getCartItems } from '../../redux/cart/cartActions';
 import CartItem from './CartItem';
 
-const CartPage = () => {
+const CartPage = ({ cartItems, getCartItems }) => {
+  useEffect(() => {
+    getCartItems();
+  }, [getCartItems]);
+
   return (
     <section className="shopping-cart-area pt-80 pb-80">
       <div className="container">
@@ -27,7 +33,13 @@ const CartPage = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <CartItem />
+                  {cartItems && cartItems.map(cartItem =>
+                    <CartItem
+                      title={cartItem.title}
+                      description={cartItem.description}
+                      price={cartItem.price}
+                      stock={cartItem.items_in_stock} />
+                  )}
                 </tbody>
               </table>
             </div>
@@ -38,4 +50,16 @@ const CartPage = () => {
   )
 }
 
-export default CartPage;
+const mapStateToProp = state => {
+  return {
+    cartItems: state.cartItems
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getCartItems: () => dispatch(getCartItems())
+  }
+}
+
+export default connect(mapStateToProp, mapDispatchToProps)(CartPage);

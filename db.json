@@ -136,7 +136,7 @@
   "cart": [
     {
       "productId": 14,
-      "productName": "Red Pants",
+      "title": "Red Pants",
       "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
       "imgUrl": "img-08.jpg",
       "items_in_stock": 2,

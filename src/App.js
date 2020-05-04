@@ -7,7 +7,7 @@ import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
 import './assets/css/slicknav.css';
 import './assets/css/colors/blue.css';
-import './assets/less/main.less';
+// import './assets/less/main.less';
 import "./assets/fonts/font-awesome.min.css"
 import "./assets/fonts/line-icons/line-icons.css"
 

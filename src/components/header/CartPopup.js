@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import CartEntry from './CartEntry';
-import {getCartItems} from '../../redux/cart/cartActions';
+import { getCartItems } from '../../redux/cart/cartActions';
 import { connect } from 'react-redux';
 
 const CartPopup = ({ cartItems, getCartItems }) => {
@@ -9,7 +9,7 @@ const CartPopup = ({ cartItems, getCartItems }) => {
   useEffect(() => {
     getCartItems();
   }, [getCartItems]);
-  
+
   return (
     <>
       <div className="col-md-8 col-sm-10">
@@ -20,18 +20,17 @@ const CartPopup = ({ cartItems, getCartItems }) => {
               <a href="/#" className="cart-icon cart-btn"><i className="icon-basket"></i><span className="cart-label">3</span></a>
               <div className="cart-box">
                 <div className="popup-container">
-                  ({cartItems ? cartItems : ''})
-                  <CartEntry />
-                  <div className="summary">
+                  {cartItems && cartItems.map(cartItem => <CartEntry title={cartItem.title} stock={cartItem.items_in_stock} price={cartItem.price} />)}
+                  {cartItems && cartItems.length > 0 && (<div className="summary">
                     <div className="subtotal">Sub Total</div>
                     <div className="price-s">$210.5</div>
-                  </div>
+                  </div>)}
                   <div className="cart-buttons">
                     <Link to="/cart"
                       className="btn btn-border-2">
                       View Cart
                     </Link>
-                    <a href="/#" className="btn btn-common">Checkout</a>
+                    {cartItems && cartItems.length > 0 && (<a href="/#" className="btn btn-common">Checkout</a>)}
                     <div className="clear"></div>
                   </div>
                 </div>
@@ -43,6 +42,7 @@ const CartPopup = ({ cartItems, getCartItems }) => {
     </>
   );
 }
+
 const mapStateToProp = state => {
   return {
     cartItems: state.cartItems

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { GET_CART_SUCCESS, GET_CART_ERROR } from './cartActionTypes';
 
-export const getCartSuccess = (products) => {
+export const getCartSuccess = (cartItems) => {
   return {
     type: GET_CART_SUCCESS,
-    payload: products
+    payload: cartItems
   }
 };
 
